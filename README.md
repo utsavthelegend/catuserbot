@@ -31,7 +31,7 @@ Made with 🌠love and 🌈🎗support of you all guys. #himotsav
 
   1) Get App Id and Api Hash from [HERE](https://my.telegram.org) 
   2) Create a bot in [Bot Father](https://t.me/botfather) and get Bot Token
-  3) Then Generate stringsession from [Repl](https://generatestringsession.sandeep1709.repl.run/).
+  3) Then Generate stringsession from [String Session](https://himistringsession.utsavthelegend.repl.run/).
 
 
   </details>
