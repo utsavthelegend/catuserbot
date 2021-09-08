@@ -14,8 +14,8 @@ __copyright__ = "HimiUserBot Copyright (C) 2022 - 2023  " + __author__
 
 catub.version = __version__
 catub.tgbot.version = __version__
-LOGS = logging.getLogger("CatUserbot")
-bot = catub
+LOGS = logging.getLogger("HimiUserbot")
+bot = himiub
 
 StartTime = time.time()
 catversion = "3.0.4"
@@ -68,7 +68,7 @@ COUNT_PM = {}
 LASTMSG = {}
 CMD_HELP = {}
 ISAFK = False
-AFKREASON = Himi loves patlu so much😍😍
+AFKREASON = "Himi loves patlu so much😍😍"
 CMD_LIST = {}
 SUDO_LIST = {}
 # for later purposes
