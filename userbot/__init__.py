@@ -9,13 +9,13 @@ from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
 __version__ = "3.0.4"
 __license__ = "GNU Affero General Public License v3.0"
-__author__ = "HimiUserBot <https://github.com/utsavthelegend/himibot>"
-__copyright__ = "HimiUserBot Copyright (C) 2022 - 2023  " + __author__
+__author__ = "💫HimiUserBot <https://github.com/utsavthelegend/himibot>"
+__copyright__ = "HimiUserBot Copyright (C) 2020 - 2021  " + __author__
 
 catub.version = __version__
 catub.tgbot.version = __version__
-LOGS = logging.getLogger("HimiUserbot")
-bot = himiub
+LOGS = logging.getLogger("CatUserbot")
+bot = catub
 
 StartTime = time.time()
 catversion = "3.0.4"
@@ -68,7 +68,7 @@ COUNT_PM = {}
 LASTMSG = {}
 CMD_HELP = {}
 ISAFK = False
-AFKREASON = "Himi loves patlu so much😍😍"
+AFKREASON = None
 CMD_LIST = {}
 SUDO_LIST = {}
 # for later purposes
