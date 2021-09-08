@@ -4,7 +4,7 @@ from telethon import Button
 from telethon.errors import MessageNotModifiedError
 from telethon.events import CallbackQuery
 
-from userbot import catub
+from userbot import himiub
 
 from ..Config import Config
 from ..core.logger import logging
@@ -12,7 +12,7 @@ from ..core.logger import logging
 LOGS = logging.getLogger(__name__)
 
 
-@catub.tgbot.on(CallbackQuery(data=re.compile(r"^age_verification_true")))
+@himiub.tgbot.on(CallbackQuery(data=re.compile(r"^age_verification_true")))
 async def age_verification_true(event: CallbackQuery):
     u_id = event.query.user_id
     if u_id != Config.OWNER_ID and u_id not in Config.SUDO_USERS:
@@ -30,14 +30,14 @@ async def age_verification_true(event: CallbackQuery):
     try:
         await event.edit(
             text="Set `ALLOW_NSFW` = True in Database Vars to access this plugin",
-            file="https://telegra.ph/file/85f3071c31279bcc280ef.jpg",
+            file="https://telegra.ph/file/98ac18dc4340844b8687f.mp4",
             buttons=buttons,
         )
     except MessageNotModifiedError:
         pass
 
 
-@catub.tgbot.on(CallbackQuery(data=re.compile(r"^age_verification_false")))
+@himiub.tgbot.on(CallbackQuery(data=re.compile(r"^age_verification_false")))
 async def age_verification_false(event: CallbackQuery):
     u_id = event.query.user_id
     if u_id != Config.OWNER_ID and u_id not in Config.SUDO_USERS:
@@ -55,14 +55,14 @@ async def age_verification_false(event: CallbackQuery):
     try:
         await event.edit(
             text="GO AWAY KID !",
-            file="https://telegra.ph/file/1140f16a883d35224e6a1.jpg",
+            file="https://telegra.ph/file/98ac18dc4340844b8687f.mp4",
             buttons=buttons,
         )
     except MessageNotModifiedError:
         pass
 
 
-@catub.tgbot.on(CallbackQuery(data=re.compile(r"^chg_of_decision_")))
+@himiub.tgbot.on(CallbackQuery(data=re.compile(r"^chg_of_decision_")))
 async def chg_of_decision_(event: CallbackQuery):
     u_id = event.query.user_id
     if u_id != Config.OWNER_ID and u_id not in Config.SUDO_USERS:
