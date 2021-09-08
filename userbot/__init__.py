@@ -9,8 +9,8 @@ from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
 __version__ = "3.0.4"
 __license__ = "GNU Affero General Public License v3.0"
-__author__ = "CatUserBot <https://github.com/Jisan09/catuserbot>"
-__copyright__ = "CatUserBot Copyright (C) 2020 - 2021  " + __author__
+__author__ = "HimiUserBot <https://github.com/utsavthelegend/himibot>"
+__copyright__ = "HimiUserBot Copyright (C) 2022 - 2023  " + __author__
 
 catub.version = __version__
 catub.tgbot.version = __version__
@@ -21,9 +21,9 @@ StartTime = time.time()
 catversion = "3.0.4"
 
 if Config.UPSTREAM_REPO == "badcat":
-    UPSTREAM_REPO_URL = "https://github.com/Jisan09/catuserbot"
+    UPSTREAM_REPO_URL = "https://github.com/utsavthelegend/himibot"
 elif Config.UPSTREAM_REPO == "goodcat":
-    UPSTREAM_REPO_URL = "https://github.com/sandy1709/catuserbot"
+    UPSTREAM_REPO_URL = "https://github.com/utsavthelegend/himibot"
 else:
     UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
 
@@ -68,7 +68,7 @@ COUNT_PM = {}
 LASTMSG = {}
 CMD_HELP = {}
 ISAFK = False
-AFKREASON = None
+AFKREASON = Himi loves patlu so much😍😍
 CMD_LIST = {}
 SUDO_LIST = {}
 # for later purposes
