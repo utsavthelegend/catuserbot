@@ -11,7 +11,7 @@ from telethon.errors import QueryIdInvalidError
 from telethon.events import CallbackQuery, InlineQuery
 from youtubesearchpython import VideosSearch
 
-from userbot import catub
+from userbot import himiub
 
 from ..Config import Config
 from ..helpers.functions import rand_key
@@ -30,7 +30,7 @@ from .logger import logging
 LOGS = logging.getLogger(__name__)
 
 BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)")
-CATLOGO = "https://telegra.ph/file/493268c1f5ebedc967eba.jpg"
+HIMILOGO = "https://telegra.ph/file/757fb4d69ded00b9ec4e3.jpg"
 tr = Config.COMMAND_HAND_LER
 
 
@@ -53,7 +53,7 @@ def ibuild_keyboard(buttons):
 
 
 def main_menu():
-    text = f"𝗖𝗮𝘁𝗨𝘀𝗲𝗿𝗯𝗼𝘁 𝗛𝗲𝗹𝗽𝗲𝗿\
+    text = f"Himi𝗨𝘀𝗲𝗿𝗯𝗼𝘁 𝗛𝗲𝗹𝗽𝗲𝗿\
         \n𝗣𝗿𝗼𝘃𝗶𝗱𝗲𝗱 𝗯𝘆 {mention}"
     buttons = [
         (Button.inline("ℹ️ Info", data="check"),),
@@ -208,7 +208,7 @@ def paginate_help(
     return pairs
 
 
-@catub.tgbot.on(InlineQuery)
+@himiub.tgbot.on(InlineQuery)
 async def inline_handler(event):  # sourcery no-metrics
     builder = event.builder
     result = None
@@ -225,22 +225,22 @@ async def inline_handler(event):  # sourcery no-metrics
         match2 = re.findall(inf, query)
         hid = re.compile("hide (.*)")
         match3 = re.findall(hid, query)
-        if query.startswith("**Catuserbot"):
+        if query.startswith("**himiuserbot"):
             buttons = [
                 (
                     Button.inline("Stats", data="stats"),
-                    Button.url("Repo", "https://github.com/Jisan09/catuserbot"),
+                    Button.url("Repo", "https://github.com/utsavthelegend/himibot"),
                 )
             ]
             ALIVE_PIC = gvarstatus("ALIVE_PIC")
             IALIVE_PIC = gvarstatus("IALIVE_PIC")
             if IALIVE_PIC:
-                CAT = [x for x in IALIVE_PIC.split()]
-                PIC = list(CAT)
+                HIMI = [x for x in IALIVE_PIC.split()]
+                PIC = list(HIMI)
                 I_IMG = random.choice(PIC)
             if not IALIVE_PIC and ALIVE_PIC:
-                CAT = [x for x in ALIVE_PIC.split()]
-                PIC = list(CAT)
+                HIMI = [x for x in ALIVE_PIC.split()]
+                PIC = list(HIMI)
                 I_IMG = random.choice(PIC)
             elif not IALIVE_PIC:
                 I_IMG = None
@@ -253,13 +253,13 @@ async def inline_handler(event):  # sourcery no-metrics
             elif I_IMG:
                 result = builder.document(
                     I_IMG,
-                    title="Alive cat",
+                    title="Alive himi",
                     text=query,
                     buttons=buttons,
                 )
             else:
                 result = builder.article(
-                    title="Alive cat",
+                    title="Alive himi",
                     text=query,
                     buttons=buttons,
                 )
@@ -423,8 +423,8 @@ async def inline_handler(event):  # sourcery no-metrics
         elif string == "help":
             _result = main_menu()
             result = builder.article(
-                title="© CatUserbot Help",
-                description="Help menu for CatUserbot",
+                title="© HimiUserbot Help",
+                description="Let Himi to help you🥰❣",
                 text=_result[0],
                 buttons=_result[1],
                 link_preview=False,
@@ -530,29 +530,29 @@ async def inline_handler(event):  # sourcery no-metrics
             ]
             PM_PIC = gvarstatus("PM_PIC")
             if PM_PIC:
-                CAT = [x for x in PM_PIC.split()]
-                PIC = list(CAT)
-                CAT_IMG = random.choice(PIC)
+                HIMI = [x for x in PM_PIC.split()]
+                PIC = list(HIMI)
+                HIMI_IMG = random.choice(PIC)
             else:
-                CAT_IMG = None
+                HIMI_IMG = None
             query = gvarstatus("pmpermit_text")
-            if CAT_IMG and CAT_IMG.endswith((".jpg", ".jpeg", ".png")):
+            if HIMI_IMG and HIMI_IMG.endswith((".jpg", ".jpeg", ".png")):
                 result = builder.photo(
-                    CAT_IMG,
-                    # title="Alive cat",
+                    HIMI_IMG,
+                    # title="Alive himi",
                     text=query,
                     buttons=buttons,
                 )
-            elif CAT_IMG:
+            elif HIMI_IMG:
                 result = builder.document(
-                    CAT_IMG,
-                    title="Alive cat",
+                    himi_IMG,
+                    title="Alive himi",
                     text=query,
                     buttons=buttons,
                 )
             else:
                 result = builder.article(
-                    title="Alive cat",
+                    title="Alive himi",
                     text=query,
                     buttons=buttons,
                 )
@@ -560,26 +560,26 @@ async def inline_handler(event):  # sourcery no-metrics
     else:
         buttons = [
             (
-                Button.url("Source code", "https://github.com/Jisan09/catuserbot"),
+                Button.url("Source code", "https://github.com/utsavthelegend/himibot"),
                 Button.url(
                     "Deploy",
-                    "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FMr-confused%2Fcatpack&template=https%3A%2F%2Fgithub.com%2FMr-confused%2Fcatpack",
+                    "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FMr-confused%2Fhimipack&template=https%3A%2F%2Fgithub.com%2FMr-confused%2Fcatpack",
                 ),
             )
         ]
         markup = event.client.build_reply_markup(buttons)
         photo = types.InputWebDocument(
-            url=CATLOGO, size=0, mime_type="image/jpeg", attributes=[]
+            url=HIMILOGO, size=0, mime_type="image/jpeg", attributes=[]
         )
         text, msg_entities = await event.client._parse_message_text(
-            "𝗗𝗲𝗽𝗹𝗼𝘆 𝘆𝗼𝘂𝗿 𝗼𝘄𝗻 𝗖𝗮𝘁𝗨𝘀𝗲𝗿𝗯𝗼𝘁.", "md"
+            "𝐇𝐢𝐦𝐢 𝐁𝐨𝐭 𝐰𝐚𝐧𝐧𝐚 𝐡𝐞𝐥𝐩 𝐲𝐨𝐮  𝐃𝐞𝐩𝐥𝐨𝐲 𝐢𝐭 𝐟𝐚𝐬𝐭💝💎.", "md"
         )
         result = types.InputBotInlineResult(
             id=str(uuid4()),
             type="photo",
-            title="𝘾𝙖𝙩𝙐𝙨𝙚𝙧𝙗𝙤𝙩",
+            title="𝑯𝒊𝒎𝒊💫𝙐𝙨𝙚𝙧𝙗𝙤𝙩",
             description="Deploy yourself",
-            url="https://github.com/Jisan09/catuserbot",
+            url="https://github.com/utsavthelegend/himibot",
             thumb=photo,
             content=photo,
             send_message=types.InputBotInlineMessageMediaAuto(
@@ -589,7 +589,7 @@ async def inline_handler(event):  # sourcery no-metrics
         await event.answer([result] if result else None)
 
 
-@catub.tgbot.on(CallbackQuery(data=re.compile(b"close")))
+@himiub.tgbot.on(CallbackQuery(data=re.compile(b"close")))
 @check_owner
 async def on_plug_in_callback_query_handler(event):
     buttons = [
@@ -598,7 +598,7 @@ async def on_plug_in_callback_query_handler(event):
     await event.edit("Menu Closed", buttons=buttons)
 
 
-@catub.tgbot.on(CallbackQuery(data=re.compile(b"check")))
+@himiub.tgbot.on(CallbackQuery(data=re.compile(b"check")))
 async def on_plugin_callback_query_handler(event):
     text = f"𝙿𝚕𝚞𝚐𝚒𝚗𝚜: {len(PLG_INFO)}\
         \n𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜: {len(CMD_INFO)}\
@@ -609,7 +609,7 @@ async def on_plugin_callback_query_handler(event):
     await event.answer(text, cache_time=0, alert=True)
 
 
-@catub.tgbot.on(CallbackQuery(data=re.compile(b"(.*)_menu")))
+@himiub.tgbot.on(CallbackQuery(data=re.compile(b"(.*)_menu")))
 @check_owner
 async def on_plug_in_callback_query_handler(event):
     category = str(event.pattern_match.group(1).decode("UTF-8"))
@@ -620,7 +620,7 @@ async def on_plug_in_callback_query_handler(event):
     await event.edit(text, buttons=buttons)
 
 
-@catub.tgbot.on(
+@himiub.tgbot.on(
     CallbackQuery(
         data=re.compile(b"back_([a-z]+)_([a-z1-9]+)_([0-9]+)_?([a-z1-9]+)?_?([0-9]+)?")
     )
@@ -690,7 +690,7 @@ async def on_plug_in_callback_query_handler(event):
     await event.edit(buttons=buttons)
 
 
-@catub.tgbot.on(
+@himiub.tgbot.on(
     CallbackQuery(data=re.compile(rb"(.*)_next\((.+?)\)_([a-z]+)_?([a-z]+)?_?(.*)?"))
 )
 @check_owner
@@ -718,7 +718,7 @@ async def on_plug_in_callback_query_handler(event):
     await event.edit(buttons=buttons)
 
 
-@catub.tgbot.on(
+@himiub.tgbot.on(
     CallbackQuery(
         data=re.compile(b"(.*)_cmdhelp_([a-z1-9]+)_([0-9]+)_([a-z]+)_([0-9]+)")
     )
