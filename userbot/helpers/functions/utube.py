@@ -31,11 +31,11 @@ name_dl = (
 )
 
 
-async def yt_search(cat):
+async def yt_search(himimylove):
     try:
-        cat = urllib.parse.quote(cat)
+        Himi = urllib.parse.quote(himi)
         html = urllib.request.urlopen(
-            "https://www.youtube.com/results?search_query=" + cat
+            "https://www.youtube.com/results?search_query=" + himi
         )
         user_data = re.findall(r"watch\?v=(\S{11})", html.read().decode())
         video_link = []
@@ -171,7 +171,7 @@ def yt_search_btns(
     buttons = [
         [
             Button.inline(
-                text="⬅️  Back",
+                text="⬅️  😂Back",
                 data=f"ytdl_back_{data_key}_{page}",
             ),
             Button.inline(
@@ -185,7 +185,7 @@ def yt_search_btns(
                 data=f"ytdl_listall_{data_key}_{page}",
             ),
             Button.inline(
-                text="⬇️  Download",
+                text="⬇️🇮🇳🤞🏻🎗  Download",
                 data=f"ytdl_download_{vid}_0",
             ),
         ],
@@ -205,9 +205,9 @@ def download_button(vid: str, body: bool = False):  # sourcery no-metrics
         vid_data = {"formats": []}
     buttons = [
         [
-            Button.inline("⭐️ BEST - 📹 MKV", data=f"ytdl_download_{vid}_mkv_v"),
+            Button.inline("⭐️ BEST😎 - 📹 MKV", data=f"ytdl_download_{vid}_mkv_v"),
             Button.inline(
-                "⭐️ BEST - 📹 WebM/MP4",
+                "⭐️ BEST - 📹 🦚WebM/MP4",
                 data=f"ytdl_download_{vid}_mp4_v",
             ),
         ]
