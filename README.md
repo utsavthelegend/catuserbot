@@ -1,6 +1,6 @@
-# CatUserbot
-A simple Telegram userbot based on Telethon .
-[![catuserbot logo](https://telegra.ph/file/b7dc845e3a48cde0d7bb1.jpg)](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fsandy1709%2Fcatuserbot%2Ftree%2Fbugs&template=https%3A%2F%2Fgithub.com%2Fsandy1709%2Fcatuserbot)
+# 💫HIM🥰TSAV
+A  best telegram userassistant developed with  my 💫himi love.
+[![catuserbot logo](https://telegra.ph/file/9235efa909c7f4ee4d960.jpg)](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fsandy1709%2Fcatuserbot%2Ftree%2Fbugs&template=https%3A%2F%2Fgithub.com%2Fsandy1709%2Fcatuserbot)
 ![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2FJisan09%2Fcatuserbot)
 [![CodeFactor](https://www.codefactor.io/repository/github/Jisan09/catuserbot/badge?&style=flat-square)](https://www.codefactor.io/repository/github/Jisan09/catuserbot)
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
@@ -17,9 +17,9 @@ A simple Telegram userbot based on Telethon .
 
 
 
-A simple Telegram userbot based on Telethon .
+Made with love and support of you all guys. #himotsav
 
-## How to deploy catuserbot
+## How to activate your own Himi UserBot
 ### Self host
 
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2FJisan09%2Fcatpack)
@@ -37,8 +37,8 @@ A simple Telegram userbot based on Telethon .
   </details>
   
 ## Support
-   <a href="https://t.me/catuserbot17"><img src="https://img.shields.io/badge/Channel%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
-   <a href="https://t.me/catuserbot_support"><img src="https://img.shields.io/badge/Group%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
+   <a href="https://t.me/TRUTHLINESAF"><img src="https://img.shields.io/badge/Channel%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
+   <a href="https://t.me/hosthejosh"><img src="https://img.shields.io/badge/Group%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
    
 ## Inspiration
    - [X-tra-Telegram](https://github.com/Dark-Princ3/X-tra-Telegram)
@@ -49,24 +49,20 @@ A simple Telegram userbot based on Telethon .
 ## Disclaimer
 
 ```
-              YOU ARE FOREWARNED
+              ⚡🌀WARNING🌀⚡
 Your Telegram account may get banned.   
-Catuserbot or we are not responsible for your account, 
-This bot is intended for the purpose of having fun with some fun commands 
-and group management with some helpfull commands.
-
-If  you ended up spamming groups, getting reported left and right, 
-and you ended up in being fight with Telegram 
-and at the end Telegram Team deleted your account. DON'T BLAME US.
+💫HIMI USERBOT or we are not responsible for your account, 
+This assistant bot  is intended for the purpose of having fun with some fun commands 
+,group management with some helpful commands and making your peronalized experience more better with various userful commands..
 
 No personal support will be provided / We won't spoon feed you. 
 If you need help ask in our support group 
 and we or our friends will try to help you.
+☺NEVER LET THE SPECIAL MOMENTS TO BE MEMORIES ONLY🙂💫
 
-Thanks for using our bot 😺
+Thanks for using our bot 🧡❣💛
 ```
 
 ## Credits
-   - Special thanks to [LonamiWebs](https://github.com/LonamiWebs/Telethon/) for Telethon libraray
-   - To all devs of these [Userbots](https://github.com/sandy1709/catuserbot/tree/bugs#inspiration)
+   - 💫TO ALL OUR LEGENDS FAMILY (T.ME/HOSTHEJOSH) AND 💫HIMI☺
    - Finally to all [contributors of Catuserbot](https://github.com/sandy1709/catuserbot/graphs/contributors)
