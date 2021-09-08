@@ -3,7 +3,7 @@ from math import floor
 
 from telethon.utils import get_display_name
 
-from userbot import catub
+from userbot import himiub
 
 from ..Config import Config
 from ..core.logger import logging
@@ -65,14 +65,14 @@ async def ban_user_from_bot(user, reason, reply_to=None):
     banned_msg = (
         f"**You have been Banned Forever from using this bot.\nReason** : {reason}"
     )
-    await catub.tgbot.send_message(user.id, banned_msg)
+    await himiub.tgbot.send_message(user.id, banned_msg)
     info = f"**#Banned_Bot_PM_User**\
             \n\n👤 {_format.mentionuser(get_display_name(user) , user.id)}\
             \n**First Name:** {user.first_name}\
             \n**User ID:** `{user.id}`\
             \n**Reason:** `{reason}`"
     if BOTLOG:
-        await catub.send_message(BOTLOG_CHATID, info)
+        await himiub.send_message(BOTLOG_CHATID, info)
     return info
 
 
@@ -91,5 +91,5 @@ async def unban_user_from_bot(user, reason, reply_to=None):
             \n**First Name:** {user.first_name}\
             \n**User ID:** `{user.id}`"
     if BOTLOG:
-        await catub.send_message(BOTLOG_CHATID, info)
+        await himiub.send_message(BOTLOG_CHATID, info)
     return info
