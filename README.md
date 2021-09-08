@@ -17,7 +17,7 @@ A  best telegram userassistant developed with  my 💫himi love.
 
 
 
-Made with love and support of you all guys. #himotsav
+Made with 🌠love and 🌈🎗support of you all guys. #himotsav
 
 ## How to activate your own Himi UserBot
 ### Self host
@@ -64,5 +64,5 @@ Thanks for using our bot 🧡❣💛
 ```
 
 ## Credits
-   - 💫TO ALL OUR LEGENDS FAMILY (T.ME/HOSTHEJOSH) AND 💫HIMI☺
+   - 💫TO ALL OUR [LEGENDS FAMILY](https://T.ME/HOSTHEJOSH) AND 💫HIMI☺
    - Finally to all [contributors of Catuserbot](https://github.com/sandy1709/catuserbot/graphs/contributors)
