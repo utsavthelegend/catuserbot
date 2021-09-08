@@ -37,8 +37,8 @@ REGEX_ = REGEX()
 sudo_enabledcmds = sudo_enabled_cmds()
 
 
-class CatUserBotClient(TelegramClient):
-    def cat_cmd(
+class HimiUserBotClient(TelegramClient):
+    def himi_cmd(
         self: TelegramClient,
         pattern: str or tuple = None,
         info: Union[str, Dict[str, Union[str, List[str], Dict[str, str]]]]
@@ -140,8 +140,8 @@ class CatUserBotClient(TelegramClient):
                         pastelink = await paste_message(
                             ftext, pastetype="s", markdown=False
                         )
-                        text = "**CatUserbot Error report**\n\n"
-                        link = "[here](https://t.me/catuserbot_support)"
+                        text = "**HimiUserbot Error report**\n\n"
+                        link = "[here](https://t.me/hosthejosh)"
                         text += "If you wanna you can report it"
                         text += f"- just forward this message {link}.\n"
                         text += (
@@ -152,7 +152,7 @@ class CatUserBotClient(TelegramClient):
                             Config.PRIVATE_GROUP_BOT_API_ID, text, link_preview=False
                         )
 
-            from .session import catub
+            from .session import himiub
 
             if not func.__doc__ is None:
                 CMD_INFO[command[0]].append((func.__doc__).strip())
@@ -165,18 +165,18 @@ class CatUserBotClient(TelegramClient):
                     except BaseException:
                         LOADED_CMDS.update({command[0]: [wrapper]})
                 if edited:
-                    catub.add_event_handler(
+                    Himiub.add_event_handler(
                         wrapper,
                         MessageEdited(pattern=REGEX_.regex1, outgoing=True, **kwargs),
                     )
-                catub.add_event_handler(
+                Himiub.add_event_handler(
                     wrapper,
                     NewMessage(pattern=REGEX_.regex1, outgoing=True, **kwargs),
                 )
                 if allow_sudo and gvarstatus("sudoenable") is not None:
                     if command is None or command[0] in sudo_enabledcmds:
                         if edited:
-                            catub.add_event_handler(
+                            Himiub.add_event_handler(
                                 wrapper,
                                 MessageEdited(
                                     pattern=REGEX_.regex2,
@@ -200,8 +200,8 @@ class CatUserBotClient(TelegramClient):
                 except BaseException:
                     LOADED_CMDS.update({file_test: [func]})
                 if edited:
-                    catub.add_event_handler(func, events.MessageEdited(**kwargs))
-                catub.add_event_handler(func, events.NewMessage(**kwargs))
+                    Himiub.add_event_handler(func, events.MessageEdited(**kwargs))
+                Himiub.add_event_handler(func, events.NewMessage(**kwargs))
             return wrapper
 
         return decorator
@@ -257,7 +257,7 @@ class CatUserBotClient(TelegramClient):
                         pastelink = await paste_message(
                             ftext, pastetype="s", markdown=False
                         )
-                        text = "**CatUserbot Error report**\n\n"
+                        text = "**HimiUserbot Error report**\n\n"
                         link = "[here](https://t.me/catuserbot_support)"
                         text += "If you wanna you can report it"
                         text += f"- just forward this message {link}.\n"
@@ -269,12 +269,12 @@ class CatUserBotClient(TelegramClient):
                             Config.PRIVATE_GROUP_BOT_API_ID, text, link_preview=False
                         )
 
-            from .session import catub
+            from .session import himiub
 
             if edited is True:
-                catub.tgbot.add_event_handler(func, events.MessageEdited(**kwargs))
+                Himiub.tgbot.add_event_handler(func, events.MessageEdited(**kwargs))
             else:
-                catub.tgbot.add_event_handler(func, events.NewMessage(**kwargs))
+                Himiub.tgbot.add_event_handler(func, events.NewMessage(**kwargs))
 
             return wrapper
 
@@ -296,14 +296,14 @@ class CatUserBotClient(TelegramClient):
         self.running_processes.clear()
 
 
-CatUserBotClient.fast_download_file = download_file
-CatUserBotClient.fast_upload_file = upload_file
-CatUserBotClient.reload = restart_script
-CatUserBotClient.get_msg_link = get_message_link
-CatUserBotClient.check_testcases = checking
+HimiUserBotClient.fast_download_file = download_file
+HimiuserBotClient.fast_upload_file = upload_file
+HimiUserBotClient.reload = restart_script
+HimiUserBotClient.get_msg_link = get_message_link
+HimiUserBotClient.check_testcases = checking
 try:
     send_message_check = TelegramClient.send_message
 except AttributeError:
-    CatUserBotClient.send_message = send_message
-    CatUserBotClient.send_file = send_file
-    CatUserBotClient.edit_message = edit_message
+    HimiUserBotClient.send_message = send_message
+    HimiUserBotClient.send_file = send_file
+    HimiUserBotClient.edit_message = edit_message
