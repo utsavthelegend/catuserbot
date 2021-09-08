@@ -20,12 +20,12 @@ A  best telegram userassistant developed with  my 💫himi love.
 Made with 🌠love and 🌈🎗support of you all guys. #himotsav
 
 ## How to activate your own Himi UserBot
-### Self host
+### Self Deploy
 
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2FJisan09%2Fcatpack)
 
   <details>
-    <summary>Steps to deploy on Heroku !! </summary>
+    <summary>Steps to deploy Your own 🎊Himi Bot </summary>
 
   #### Get Required values First 
 
@@ -39,6 +39,7 @@ Made with 🌠love and 🌈🎗support of you all guys. #himotsav
 ## Support
    <a href="https://t.me/TRUTHLINESAF"><img src="https://img.shields.io/badge/Channel%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
    <a href="https://t.me/hosthejosh"><img src="https://img.shields.io/badge/Group%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
+![ 🔥♨️𝐓հҽ 𝐋ҽցҽղժ𝐬♨️🔥](https://telegra.ph/file/1bf004625efdf952f02ed.jpg )
    
 ## Inspiration
    - [X-tra-Telegram](https://github.com/Dark-Princ3/X-tra-Telegram)
@@ -46,7 +47,7 @@ Made with 🌠love and 🌈🎗support of you all guys. #himotsav
    - [Nana-Remix](https://github.com/pokurt/Nana-Remix)
    - [Userge-X](https://github.com/code-rgb/USERGE-X/)
    
-## Disclaimer
+## Note to Users
 
 ```
               ⚡🌀WARNING🌀⚡
@@ -55,9 +56,7 @@ Your Telegram account may get banned.
 This assistant bot  is intended for the purpose of having fun with some fun commands 
 ,group management with some helpful commands and making your peronalized experience more better with various userful commands..
 
-No personal support will be provided / We won't spoon feed you. 
-If you need help ask in our support group 
-and we or our friends will try to help you.
+If you wanna help we will definitely help you . For this be the part of our small family [🔥♨️𝐓հҽ 𝐋ҽցҽղժ𝐬♨️🔥](http://t.me/hosthejosh)
 ☺NEVER LET THE SPECIAL MOMENTS TO BE MEMORIES ONLY🙂💫
 
 Thanks for using our bot 🧡❣💛
