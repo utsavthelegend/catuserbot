@@ -56,7 +56,7 @@ Your Telegram account may get banned.
 This assistant bot  is intended for the purpose of having fun with some fun commands 
 ,group management with some helpful commands and making your peronalized experience more better with various userful commands..
 
-If you wanna help we will definitely help you . For this be the part of our small family [🔥♨️𝐓հҽ 𝐋ҽցҽղժ𝐬♨️🔥](http://t.me/hosthejosh)
+If you wanna help we will definitely help you . For this be the part of our small family 🔥♨️𝐓հҽ 𝐋ҽցҽղժ𝐬♨️🔥
 ☺NEVER LET THE SPECIAL MOMENTS TO BE MEMORIES ONLY🙂💫
 
 Thanks for using our bot 🧡❣💛
