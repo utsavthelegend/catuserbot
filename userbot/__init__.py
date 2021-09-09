@@ -20,12 +20,12 @@ bot = himiub
 StartTime = time.time()
 himiversion = "3.0.4"
 
-if Config.WHOM YOU LOVE? == "himi":
-    WHOM YOU LOVE?_URL = "https://github.com/utsavthelegend/himibot"
-elif Config.WHOM YOU LOVE? == "patlu":
-    WHOM YOU LOVE?_URL = "https://github.com/utsavthelegend/himibot"
+if Config.UPSTREAM_REPO == "himi":
+    UPSTREAM_REPO_URL = "https://github.com/utsavthelegend/himibot"
+elif Config.UPSTREAM_REPO == "patlu":
+    UPSTREAM_REPO_URL = "https://github.com/utsavthelegend/himibot"
 else:
-    WHOM YOU LOVE?_URL = Config.WHOM YOU LOVE?
+    UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
 
 if Config.PRIVATE_GROUP_BOT_API_ID == 0:
     if gvarstatus("PRIVATE_GROUP_BOT_API_ID") is None:
