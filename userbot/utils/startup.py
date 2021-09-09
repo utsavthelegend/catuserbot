@@ -12,7 +12,7 @@ from userbot import BOTLOG, BOTLOG_CHATID, PM_LOGGER_GROUP_ID
 
 from ..Config import Config
 from ..core.logger import logging
-from ..core.session import himiub
+from ..core.session import catub
 from ..helpers.utils import install_pip
 from ..sql_helper.global_collection import (
     del_keyword_collectionlist,
@@ -32,24 +32,24 @@ async def setup_bot():
     """
     try:
         await himub.connect()
-        config = await himiub(functions.help.GetConfigRequest())
+        config = await catub(functions.help.GetConfigRequest())
         for option in config.dc_options:
-            if option.ip_address == himiub.session.server_address:
-                if himiub.session.dc_id != option.id:
+            if option.ip_address == catub.session.server_address:
+                if catub.session.dc_id != option.id:
                     LOGS.warning(
-                        f"Fixed DC ID in session from {himiub.session.dc_id}"
+                        f"Fixed DC ID in session from {catub.session.dc_id}"
                         f" to {option.id}"
                     )
-                Himiub.session.set_dc(option.id, option.ip_address, option.port)
-                Himiub.session.save()
+                catub.session.set_dc(option.id, option.ip_address, option.port)
+                catub.session.save()
                 break
-        bot_details = await himiub.tgbot.get_me()
+        bot_details = await catub.tgbot.get_me()
         Config.TG_BOT_USERNAME = f"@{bot_details.username}"
-        # await himiub.start(bot_token=Config.TG_BOT_USERNAME)
-        Himiub.me = await himiub.get_me()
-        Himiub.uid = himiub.tgbot.uid = utils.get_peer_id(himiub.me)
+        # await catub.start(bot_token=Config.TG_BOT_USERNAME)
+        catub.me = await catub.get_me()
+        catub.uid = catub.tgbot.uid = utils.get_peer_id(catub.me)
         if Config.OWNER_ID == 0:
-            Config.OWNER_ID = utils.get_peer_id(himiub.me)
+            Config.OWNER_ID = utils.get_peer_id(catub.me)
     except Exception as e:
         LOGS.error(f"STRING_SESSION - {e}")
         sys.exit()
@@ -61,7 +61,7 @@ async def startupmessage():
     """
     try:
         if BOTLOG:
-            Config.HIMIUBLOGO = await himiub.tgbot.send_file(
+            Config.CATUBLOGO = await catub.tgbot.send_file(
                 BOTLOG_CHATID,
                 "https://telegra.ph/file/01b1e4f3804a0946aa0b4.jpg",
                 caption="**💫Himi Bot is now ready to assist you😍😍.**",
@@ -79,12 +79,12 @@ async def startupmessage():
         return None
     try:
         if msg_details:
-            await himiub.check_testcases()
-            message = await himiub.get_messages(msg_details[0], ids=msg_details[1])
+            await catub.check_testcases()
+            message = await catub.get_messages(msg_details[0], ids=msg_details[1])
             text = message.text + "\n\n**Ok Bot is Back and Alive.**"
-            await himiub.edit_message(msg_details[0], msg_details[1], text)
+            await catub.edit_message(msg_details[0], msg_details[1], text)
             if gvarstatus("restartupdate") is not None:
-                await himiub.send_message(
+                await catub.send_message(
                     msg_details[0],
                     f"{cmdhr}ping",
                     reply_to=msg_details[1],
@@ -110,7 +110,7 @@ async def ipchange():
         delgvar("ipaddress")
         LOGS.info("Ip Change detected")
         try:
-            await himiub.disconnect()
+            await catub.disconnect()
         except (ConnectionError, CancelledError):
             pass
         return "ip change"
@@ -120,9 +120,9 @@ async def add_bot_to_logger_group(chat_id):
     """
     To add bot to logger groups
     """
-    bot_details = await himiub.tgbot.get_me()
+    bot_details = await catub.tgbot.get_me()
     try:
-        await himiub(
+        await catub(
             functions.messages.AddChatUserRequest(
                 chat_id=chat_id,
                 user_id=bot_details.username,
@@ -131,7 +131,7 @@ async def add_bot_to_logger_group(chat_id):
         )
     except BaseException:
         try:
-            await himiub(
+            await catub(
                 functions.channels.InviteToChannelRequest(
                     channel=chat_id,
                     users=[bot_details.username],
@@ -182,7 +182,7 @@ async def verifyLoggerGroup():
     flag = False
     if BOTLOG:
         try:
-            entity = await himiub.get_entity(BOTLOG_CHATID)
+            entity = await catub.get_entity(BOTLOG_CHATID)
             if not isinstance(entity, types.User) and not entity.creator:
                 if entity.default_banned_rights.send_messages:
                     LOGS.info(
@@ -208,7 +208,7 @@ async def verifyLoggerGroup():
     else:
         descript = "Support Us:- @hosthejosh 🥰🙏Don't delete this group or change to group(If you change group all your previous snips, welcome will be lost.)"
         _, groupid = await create_supergroup(
-            "💫HIM😍TSAV MAILS", himiub, Config.TG_BOT_USERNAME, descript
+            "💫HIM😍TSAV MAILS", catub, Config.TG_BOT_USERNAME, descript
         )
         addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
         print(
@@ -217,7 +217,7 @@ async def verifyLoggerGroup():
         flag = True
     if PM_LOGGER_GROUP_ID != -100:
         try:
-            entity = await himiub.get_entity(PM_LOGGER_GROUP_ID)
+            entity = await catub.get_entity(PM_LOGGER_GROUP_ID)
             if not isinstance(entity, types.User) and not entity.creator:
                 if entity.default_banned_rights.send_messages:
                     LOGS.info(
