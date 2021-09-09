@@ -4,7 +4,7 @@ import heroku3
 
 from .Config import Config
 from .core.logger import logging
-from .core.session import himiub
+from .core.session import catub
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
 __version__ = "3.0.4"
@@ -12,17 +12,17 @@ __license__ = "GNU Affero General Public License v3.0"
 __author__ = "💫HimiUserBot <https://github.com/utsavthelegend/himibot>"
 __copyright__ = "HimiUserBot Copyright (C) 2022 - 2023  " + __author__
 
-Himiub.version = __version__
-Himiub.tgbot.version = __version__
+catub.version = __version__
+catub.tgbot.version = __version__
 LOGS = logging.getLogger("HimiUserbot")
 bot = himiub
 
 StartTime = time.time()
-himiversion = "3.0.4"
+catversion = "3.0.4"
 
-if Config.UPSTREAM_REPO == "himi":
+if Config.UPSTREAM_REPO == "good cat":
     UPSTREAM_REPO_URL = "https://github.com/utsavthelegend/himibot"
-elif Config.UPSTREAM_REPO == "patlu":
+elif Config.UPSTREAM_REPO == "bad cat":
     UPSTREAM_REPO_URL = "https://github.com/utsavthelegend/himibot"
 else:
     UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
