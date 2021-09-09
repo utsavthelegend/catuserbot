@@ -4,7 +4,7 @@ import heroku3
 
 from .Config import Config
 from .core.logger import logging
-from .core.session import catub
+from .core.session import himiub
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
 __version__ = "3.0.4"
@@ -12,20 +12,20 @@ __license__ = "GNU Affero General Public License v3.0"
 __author__ = "💫HimiUserBot <https://github.com/utsavthelegend/himibot>"
 __copyright__ = "HimiUserBot Copyright (C) 2022 - 2023  " + __author__
 
-catub.version = __version__
-catub.tgbot.version = __version__
+Himiub.version = __version__
+Himiub.tgbot.version = __version__
 LOGS = logging.getLogger("HimiUserbot")
 bot = himiub
 
 StartTime = time.time()
-catversion = "3.0.4"
+himiversion = "3.0.4"
 
-if Config.UPSTREAM_REPO == "badcat":
-    UPSTREAM_REPO_URL = "https://github.com/utsavthelegend/himibot"
-elif Config.UPSTREAM_REPO == "goodcat":
-    UPSTREAM_REPO_URL = "https://github.com/utsavthelegend/himibot"
+if Config.WHOM YOU LOVE? == "himi":
+    WHOM YOU LOVE?_URL = "https://github.com/utsavthelegend/himibot"
+elif Config.WHOM YOU LOVE? == "patlu":
+    WHOM YOU LOVE?_URL = "https://github.com/utsavthelegend/himibot"
 else:
-    UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
+    WHOM YOU LOVE?_URL = Config.WHOM YOU LOVE?
 
 if Config.PRIVATE_GROUP_BOT_API_ID == 0:
     if gvarstatus("PRIVATE_GROUP_BOT_API_ID") is None:
@@ -68,7 +68,7 @@ COUNT_PM = {}
 LASTMSG = {}
 CMD_HELP = {}
 ISAFK = False
-AFKREASON = None
+AFKREASON = #HIMOTSAV
 CMD_LIST = {}
 SUDO_LIST = {}
 # for later purposes
